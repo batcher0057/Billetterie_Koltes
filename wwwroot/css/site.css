@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar {
+    background-color: rgb(0,197,225)!important;
+    padding: 0;
+}
+
+.container > a {
+    /*color: #0077cc;*/
+    color: black;
+}
+
+.menu a:hover {
+    text-decoration-line: underline !important;
+    color: dimgray !important;
+}
+
+.footer > .container > a:hover {
+    color: dimgray !important;
+}

@@ -1,0 +1,145 @@
+/* _content/CRM_Koltes/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-os9547s847] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-os9547s847] {
+  color: #0077cc;
+}
+
+.btn-primary[b-os9547s847] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-os9547s847], .nav-pills .show > .nav-link[b-os9547s847] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-os9547s847] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-os9547s847] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-os9547s847] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-os9547s847] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-os9547s847] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: rgb(0,197,225);
+}
+
+.footer > .container[b-os9547s847] {
+    color: black;
+    font-weight: 600;
+}
+
+.menu[b-os9547s847] {
+    min-height: 5em;
+    width: 70em;
+    font-size: large;
+    color: black;
+    font-weight: 700;
+}
+
+.barre[b-os9547s847] {
+    min-width: 30em;
+    height: 50px;
+}
+
+.barre > input[b-os9547s847] {
+    height: 50px;
+    min-width: 20em;
+    border-radius: 0.8rem;
+    border: 3px solid #111;
+}
+
+.barre > button[b-os9547s847] {
+    height: 50px;
+    min-width: 6em;
+    border-radius: 0.8rem;
+    /*background: white;*/
+}
+
+.glow-on-hover[b-os9547s847] {
+    min-height: 50px;
+    min-width: 130px;
+    border-radius: 0.8rem;
+    background: white;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border: 3px solid #111;
+    /*border-radius: 10px;*/
+}
+
+.glow-on-hover[b-os9547s847]:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-b-os9547s847 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active[b-os9547s847] {
+    color: #000
+}
+
+.glow-on-hover:active[b-os9547s847]:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover[b-os9547s847]:before {
+    opacity: 1;
+}
+
+.glow-on-hover[b-os9547s847]:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing-b-os9547s847 {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

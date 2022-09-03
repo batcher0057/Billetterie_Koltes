@@ -1,0 +1,101 @@
+﻿@model CRM_Koltes.Models.Individu
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Ajouter un nouvel individu</h3>
+
+<!-- <h4>Individu</h4> -->
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Courriel" class="control-label"></label>
+                <input asp-for="Courriel" class="form-control" />
+                <span asp-validation-for="Courriel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotDePasse" class="control-label"></label>
+                <input asp-for="MotDePasse" class="form-control" />
+                <span asp-validation-for="MotDePasse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Civilite" class="control-label"></label>
+                @*<input asp-for="Civilite" class="form-control" />*@
+                <br />
+                @*@Html.DropDownListFor(m => m.Civilite, 
+                    new SelectList(Enum.GetValues(typeof(Individu.Convenance))), 
+                    "Votre choix")*@
+                <select class="form-control" id="Civilite" data-val="true" data-val-length="The field Civilité must be a string with a minimum length of 1 and a maximum length of 12." data-val-length-max="12" data-val-length-min="1" name="Civilite"><option value=""></option>
+                    <option>Madame</option>
+                    <option>Monsieur</option>
+                    <option>Mademoiselle</option>
+                </select>
+                <span asp-validation-for="Civilite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prenom" class="control-label"></label>
+                <input asp-for="Prenom" class="form-control" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateNaissance" class="control-label"></label>
+                <input asp-for="DateNaissance" class="form-control" />
+                <span asp-validation-for="DateNaissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelMobile" class="control-label"></label>
+                <input asp-for="TelMobile" class="form-control" />
+                <span asp-validation-for="TelMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pseudo" class="control-label"></label>
+                <input asp-for="Pseudo" class="form-control" />
+                <span asp-validation-for="Pseudo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categorie" class="control-label"></label>
+                @*<input asp-for="Categorie" class="form-control" />*@
+                <select class="form-control" id="Categorie" data-val="true" data-val-length="The field Civilité must be a string with a minimum length of 1 and a maximum length of 100." data-val-length-max="100" data-val-length-min="1" name="Categorie"><option value=""></option>
+                    <option>Spectateur</option>
+                    <option>Adhérent</option>
+                    <option>Abonné</option>
+                    <option>Artiste</option>
+                    <option>Technicien</option>
+                    <option>Administratif</option>
+                    <option>Commercial</option>
+                </select>
+                <span asp-validation-for="Categorie" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAdmin" /> @Html.DisplayNameFor(model => model.IsAdmin)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsCoworker" /> @Html.DisplayNameFor(model => model.IsCoworker)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ajouter l'individu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Revenir à la liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,89 @@
+﻿@model CRM_Koltes.Models.Structure
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Structure</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdStructure" />
+            <div class="form-group">
+                <label asp-for="RaisonCommerciale" class="control-label"></label>
+                <input asp-for="RaisonCommerciale" class="form-control" />
+                <span asp-validation-for="RaisonCommerciale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RaisonSociale" class="control-label"></label>
+                <input asp-for="RaisonSociale" class="form-control" />
+                <span asp-validation-for="RaisonSociale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Siret" class="control-label"></label>
+                <input asp-for="Siret" class="form-control" />
+                <span asp-validation-for="Siret" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructDateEnregistrement" class="control-label"></label>
+                <input asp-for="StructDateEnregistrement" class="form-control" />
+                <span asp-validation-for="StructDateEnregistrement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructNumeroVoie" class="control-label"></label>
+                <input asp-for="StructNumeroVoie" class="form-control" />
+                <span asp-validation-for="StructNumeroVoie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructVoie" class="control-label"></label>
+                <input asp-for="StructVoie" class="form-control" />
+                <span asp-validation-for="StructVoie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructBis" class="control-label"></label>
+                <input asp-for="StructBis" class="form-control" />
+                <span asp-validation-for="StructBis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructCodePostal" class="control-label"></label>
+                <input asp-for="StructCodePostal" class="form-control" />
+                <span asp-validation-for="StructCodePostal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructVille" class="control-label"></label>
+                <input asp-for="StructVille" class="form-control" />
+                <span asp-validation-for="StructVille" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructPays" class="control-label"></label>
+                <input asp-for="StructPays" class="form-control" />
+                <span asp-validation-for="StructPays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructCategorie" class="control-label"></label>
+                <input asp-for="StructCategorie" class="form-control" />
+                <span asp-validation-for="StructCategorie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StructActivitePrincipale" class="control-label"></label>
+                <input asp-for="StructActivitePrincipale" class="form-control" />
+                <span asp-validation-for="StructActivitePrincipale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
